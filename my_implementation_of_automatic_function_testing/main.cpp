@@ -60,9 +60,26 @@ bool isPalindrome(const string& s) {
 
 int main() {
 
-	vector<int> a = { 1, 2, 3 };
-	vector<int> b = { 1, 2, 3 };
-	vector<int> c = { 1, 2, 3 };
+	/*
+	
+		Важно, если ваша функция принимает несколько аргументов
+		func(some_type first, some_type second);
+		Под позиции first, second вы заводите разные векторы.
+		То есть как бы матрицу, где столбец - разные аргументы,
+		А строчки - их значения, которые будут поочерёдно подставляться
+	
+	*/
+
+	vector<int> a = { 1, 4, 7 };
+	vector<int> b = { 2, 5, 8 };
+	vector<int> c = { 3, 6, 9 };
+
+	/*
+	* Сначала вызовется sumOfThree(1, 2, 3);
+	* Затем sumOfThree(4, 5, 6);
+	* Затем sumOfThree(7, 8, 9);
+	*/
+
 	vector<int> output1 = { 3, 6, 9 };
 	cout << "sumOfThree: \n";
 	check_the_solution(output1, sumOfThree, a, b, c);
